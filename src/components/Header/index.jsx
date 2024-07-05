@@ -12,7 +12,7 @@ function Header () {
         <nav className="nav">
             <img src={LOGO} className="nav__logo" alt="" />
             <ul className="nav__list">
-                <li><Link to="/" className="nav__list--link">Accueil</Link></li>
+                <li><Link to="/" className="nav__list--link home">Accueil</Link></li>
                 <li> <Link to="/apropos" className="nav__list--link">A propos</Link></li>
             </ul>
         </nav>

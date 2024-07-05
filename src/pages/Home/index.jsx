@@ -13,7 +13,7 @@ function Home () {
         const id = data.id
         return (
             <Card 
-                linkLodges={'./fiche-logement:'+id}
+                linkLodges={'./fiche-logement/'+id}
                 key={id}
                 id={id}
                 imageUrl={data.cover} 

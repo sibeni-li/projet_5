@@ -1,4 +1,4 @@
-import LOGO from "../../assets/LOGO.png"
+import LOGOW from "../../assets/LOGOW.png"
 import "../../styles/Footer.scss"
 
 function Footer () {
@@ -7,12 +7,15 @@ function Footer () {
     //Comportement
 
     //Render
-    return <footer className="footer">
-        <div className="footer__infos">
-            <img src={LOGO} className="footer__infos--logo" alt="..."/>
-            <p className="footer__infos--rights">© 2020 Kasa. All rights reserved</p> 
-            </div>
-    </footer>
+    return (
+        <footer className="footer">
+            <div className="footer__infos">
+                <img src={LOGOW} className="footer__infos--logo" alt="..."/>
+                <p className="footer__infos--rights">© 2020 Kasa. All rights reserved</p> 
+                </div>
+        </footer>
+    )
+
 }
 
 export default Footer

@@ -1,7 +1,7 @@
 .footer {
     background-color: black;
     margin-top: 50px;
-    .footer__infos {
+    &__infos {
         padding: 50px 100px 0 100px;
         display: flex;
         flex-direction: column;
@@ -9,11 +9,7 @@
         justify-content: end;
         gap: 20px;
         height: 159px;
-        .footer__infos--logo {
-            width: 124px;
-        }
-        .footer__infos--rights {
-            font-family: Montserrat;
+        &--rights {
             color: white;
             font-size: 24px;
         }
