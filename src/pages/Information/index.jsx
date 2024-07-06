@@ -1,7 +1,7 @@
-import Banner from "../../components/Banner"
-import Collapse from "../../components/Collapse"
-import imageInfo from "../../assets/imageInfo.png"
-import "../../styles/Information.scss"
+import Banner from "../../components/Banner";
+import Collapse from "../../components/Collapse";
+import imageInfo from "../../assets/imageInfo.png";
+import "../../styles/Information.scss";
 
 const aboutList = [
     {
@@ -35,7 +35,7 @@ function Information () {
 
     //Comportement
     const about = aboutList.map((aboutList) => {
-        const idAbout = aboutList.id
+        const idAbout = aboutList.id;
         return (
             <Collapse 
                 key={idAbout}
@@ -43,8 +43,8 @@ function Information () {
                 titleCollapse={aboutList.title} 
                 contentCollapse={aboutList.content}
             />
-        )
-    })
+        );
+    });
     //Render
     return (
         <div>
@@ -55,7 +55,7 @@ function Information () {
                 {about}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Information
+export default Information;

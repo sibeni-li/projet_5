@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom"
-import LOGO from '../../assets/LOGO.png'
-import "../../styles/Header.scss"
+import { Link } from "react-router-dom";
+import LOGO from '../../assets/LOGO.png';
+import "../../styles/Header.scss";
 
 function Header () {
     //State
@@ -16,7 +16,7 @@ function Header () {
                 <li> <Link to="/apropos" className="nav__list--link">A propos</Link></li>
             </ul>
         </nav>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;

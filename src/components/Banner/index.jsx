@@ -1,4 +1,4 @@
-import '../../styles/Banner.scss'
+import '../../styles/Banner.scss';
 
 function Banner ({text,imageSrc}) {
     //State
@@ -11,7 +11,7 @@ function Banner ({text,imageSrc}) {
             <img src={imageSrc} className="banner__img" alt=""/>
             <p className="banner__text">{text}</p>
         </div>
-    )
-}
+    );
+};
 
-export default Banner
+export default Banner;

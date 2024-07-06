@@ -1,16 +1,16 @@
-import { useState } from "react"
-import "../../styles/Collapse.scss"
-import arrowDown from "../../assets/arrowDown.png"
-import arrowUp from "../../assets/arrowUp.png"
+import { useState } from "react";
+import "../../styles/Collapse.scss";
+import arrowDown from "../../assets/arrowDown.png";
+import arrowUp from "../../assets/arrowUp.png";
 
 function Collapse ({titleCollapse , contentCollapse}) {
     //State
-    const [openCollapse, setOpenCollapse] = useState(false)
-    console.log(openCollapse)
+    const [openCollapse, setOpenCollapse] = useState(false);
+    console.log(openCollapse);
     //Comportement
     const handleClick = () => {
-        setOpenCollapse(!openCollapse)
-    }
+        setOpenCollapse(!openCollapse);
+    };
     //Render
     if (openCollapse) {
         return (
@@ -21,7 +21,7 @@ function Collapse ({titleCollapse , contentCollapse}) {
                 </h2>
                 <div className="collapse-content">{contentCollapse}</div>
             </div>
-        ) 
+        ) ;
     } else {
         return (
             <div className="collapse">
@@ -30,11 +30,11 @@ function Collapse ({titleCollapse , contentCollapse}) {
                     <img src={arrowUp} alt="" onClick={handleClick}></img>
                 </h2>
             </div>
-        )
-    }
-}
+        );
+    };
+};
 
-export default Collapse
+export default Collapse;
 
 /***
  * ***TODO***

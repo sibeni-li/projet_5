@@ -1,5 +1,5 @@
-import "../../styles/Card.scss"
-import { Link } from "react-router-dom"
+import "../../styles/Card.scss";
+import { Link } from "react-router-dom";
 
 
 function Card ({title,imageUrl,linkLodges}) {
@@ -19,7 +19,7 @@ function Card ({title,imageUrl,linkLodges}) {
             <p>{title}</p>
         </article>
         </Link>
-    )
-}
+    );
+};
 
-export default Card
+export default Card;

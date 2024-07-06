@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
-import "../../styles/Error.scss"
+import { Link } from "react-router-dom";
+import "../../styles/Error.scss";
 
 function Error () {
     return (
@@ -8,7 +8,7 @@ function Error () {
             <p className="error-text">Oups! La page que vous demandez n'existe pas.</p>
             <Link to="/" className="error-link">Retourner sur la page d'accueil</Link>
         </div>
-    )
-}
+    );
+};
 
-export default Error
+export default Error;

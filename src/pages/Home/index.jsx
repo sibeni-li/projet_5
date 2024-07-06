@@ -1,8 +1,8 @@
-import Banner from "../../components/Banner"
-import Card from "../../components/Card"
-import imageHome from "../../assets/imageHome.png"
-import "../../styles/Home.scss"
-import data from "../../assets/logements.json"
+import Banner from "../../components/Banner";
+import Card from "../../components/Card";
+import imageHome from "../../assets/imageHome.png";
+import "../../styles/Home.scss";
+import data from "../../assets/logements.json";
 
 
 function Home () {
@@ -10,7 +10,7 @@ function Home () {
     
     //Comportement
     const lodges = data.map((data) => {
-        const id = data.id
+        const id = data.id;
         return (
             <Card 
                 linkLodges={'./fiche-logement/'+id}
@@ -19,9 +19,9 @@ function Home () {
                 imageUrl={data.cover} 
                 title={data.title}
             />
-        )
-    })
-    console.log(lodges)
+        );
+    });
+    console.log(lodges);
     //Render
     return (
         <div>
@@ -33,7 +33,7 @@ function Home () {
                 {lodges}
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Home
+export default Home;
