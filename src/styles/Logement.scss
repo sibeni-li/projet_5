@@ -1,0 +1,21 @@
+.slide-show {
+    display: flex;
+    flex-direction: row;
+    &__img{
+        width: 1240px;
+        height: 415px;
+        object-fit: cover;
+    }
+    &__back , &__forward{
+        width: 96px;
+        height: 119px;
+        position: relative;
+        top: 150px;
+    }
+    &__back {
+        left: 100px;
+    }
+    &__forward {
+        right: 100px;
+    }
+}
