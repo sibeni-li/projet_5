@@ -1,25 +1,34 @@
 import "../../styles/Card.scss";
 import { Link } from "react-router-dom";
+import data from "../../assets/logements.json";
 
 
-function Card ({title,imageUrl,linkLodges}) {
+function Card () {
     //State
     
     //Comportement
-    
+    const lodges = data.map((data) => {
+        const id = data.id;
+        return (
+            <Link to={'./fiche-logement/'+id} key={id} id={id}>
+                <article className="card">
+                    <img 
+                        src={data.cover} 
+                        className="card-image" 
+                        alt="" 
+                    />
+                    <p>{data.title}</p>
+                </article>
+            </Link>
+        );
+    });
+    console.log(lodges)
     //Render
     return (
-        <Link to={linkLodges}>
-        <article className="card">
-            <img 
-                src={imageUrl} 
-                className="card-image" 
-                alt="" 
-            />
-            <p>{title}</p>
-        </article>
-        </Link>
-    );
+        <div className="card-container">
+            {lodges}
+        </div>
+    )
 };
 
 export default Card;
