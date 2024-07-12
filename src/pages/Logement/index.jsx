@@ -1,36 +1,52 @@
-import Slideshow from "../../components/Slideshow";
-import { useParams } from "react-router-dom";
 import data from "../../assets/logements.json";
-import { useState } from "react";
-import arrowBack from "../../assets/arrowBack.png";
-import arrowForward from "../../assets/arrowForward.png";
+import Error from "../Error";
+import { useParams } from "react-router-dom";
+import Slideshow from "../../components/Slideshow";
+import Tag from "../../components/Tag";
+import Collapse from "../../components/Collapse";
 import "../../styles/Logement.scss";
 
 function Logement (){
     //State
     const {id} = useParams();
-    const[currentLodge , setCurrentLodge] = useState(0);
+    
+    //Comportement
     const showLodge = data.find((lodge) => lodge.id === id);
     console.log(showLodge);
-    //Comportement
-    const handleNext = () => {
-        setCurrentLodge(currentLodge >= showLodge.pictures.length ? 0 : currentLodge +1);
-    };
-    const handlePrev = () => {
-        setCurrentLodge(currentLodge < 0 ? showLodge.pictures.length -1 : currentLodge -1);
-    };
-    console.log(currentLodge)
+   
     //Render
-    return (
-        <div className="slide-show">
-            <img src={arrowBack} className="slide-show__back" onClick={handlePrev} alt=""/>
-            <Slideshow 
-                lodgeId={showLodge.id} 
-                lodgeSrc={showLodge.pictures[currentLodge]}
-            />
-            <img src={arrowForward} className="slide-show__forward" onClick={handleNext} alt=""/>
-        </div>
-    );
+    if (!showLodge) {
+        return (<Error/>);
+    }else {
+        return ( 
+            <div>
+                <div>
+                    <Slideshow showLodge={showLodge}/>
+                </div>
+                <div>
+                    <h2>{showLodge.title}</h2>
+                    <p>{showLodge.location}</p>
+                    <p>{showLodge.host.name}</p>
+                    <img src={showLodge.host.picture} alt={showLodge.host.name}/>
+                </div>
+                <div>
+                    <Tag 
+                        showLodge={showLodge}/>
+                </div>
+                <div>
+                    <Collapse 
+                        key={showLodge.description}
+                        titleCollapse="Description" 
+                        contentCollapse={showLodge.description}
+                    />
+                    <Collapse   
+                        titleCollapse="Equipements" 
+                        contentCollapse={showLodge.equipments.map((equipement) => <li key={equipement}>{equipement}</li>)} 
+                    />
+                </div>
+            </div>   
+        );
+    };      
 };
 
 export default Logement;
