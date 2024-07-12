@@ -1,11 +1,13 @@
+@import 'index';
+
 .error {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: rgba(255, 96, 96, 1);
+    color: $main-color;
     &-title , &-link {
         margin: 100px 0;
-   }
+    }
     &-title {
         font-size: 288px;
     }
