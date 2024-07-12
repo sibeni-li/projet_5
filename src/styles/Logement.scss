@@ -1,9 +1,11 @@
 .slide-show {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     &__img{
         width: 1240px;
         height: 415px;
+        border-radius: 25px;
         object-fit: cover;
     }
     &__back , &__forward{
@@ -19,3 +21,11 @@
         right: 100px;
     }
 }
+ .lodge-number {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    top: 350px;
+    right: 750px;
+ }
