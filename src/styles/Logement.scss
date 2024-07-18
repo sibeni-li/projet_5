@@ -1,31 +1,149 @@
-.slide-show {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    &__img{
-        width: 1240px;
-        height: 415px;
-        border-radius: 25px;
-        object-fit: cover;
+@import 'index';
+
+
+.lodge {
+    width: 86.11%;
+    margin: 0 100px 50px 100px;
+    @media screen and (min-width: 375px) and (max-width :720px){
+        width: 89.33%;
+        margin: 20px;
     }
-    &__back , &__forward{
-        width: 96px;
-        height: 119px;
-        position: relative;
-        top: 150px;
+    &-a{
+        display: flex;
+        justify-content: space-between;
+        @media screen and (min-width: 375px) and (max-width :720px){
+            flex-direction: column;  
+        }
     }
-    &__back {
-        left: 100px;
+    &-title {
+        color: rgba(255, 96, 96, 1);
+        font-weight: 500;
+        font-size: 36px;
+        margin-bottom: 0;
+        @media screen and (min-width: 375px) and (max-width :720px){
+            font-size: 18px;
+            margin-top: 0;
+        }
     }
-    &__forward {
-        right: 100px;
+    &-location {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 500;
+        @media screen and (min-width: 375px) and (max-width :720px){
+            font-size: 14px;
+            margin-top: 10px;
+        }
     }
 }
- .lodge-number {
-    color: white;
+.a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    @media screen and (min-width: 375px) and (max-width :720px){
+        justify-content: center;
+    }
+}
+.ab {
+    display: flex;
+    color: $main-color;
     font-size: 18px;
-    font-weight: 500;
-    position: relative;
-    top: 350px;
-    right: 750px;
- }
+    gap: 10px;
+    @media screen and (min-width: 375px) and (max-width :720px){
+        font-size: 12px;   
+    }
+}
+.lodge-host-name {
+    width: 93px;
+    @media screen and (min-width: 375px) and (max-width :720px){
+        width: 60px;    
+    }
+}
+.lodge-host-picture {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin: 10px 0;
+    @media screen and (min-width: 375px) and (max-width :720px){
+        width: 32px;
+        height: 32px;  
+    }
+}
+.b {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: end;
+    margin: 10px 0;
+    @media screen and (min-width: 375px) and (max-width :720px){
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-bottom: 0;
+    }
+}
+.ba ul {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+    padding: 0;
+    @media screen and (min-width: 375px) and (max-width :720px){
+        margin-bottom: 0;
+    }
+}
+.ba li{
+    background-color: $main-color;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    width: 115px;
+    padding: 4px 0;
+    text-align: center;
+    border-radius: 10px;
+    @media screen and (min-width: 375px) and (max-width :720px){
+        width: 84px;
+        font-size: 10px;
+        border-radius: 5px;  
+    }
+}
+.bb {
+    width: 196px;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (min-width: 375px) and (max-width :720px){
+        width: 98px;
+        height: 18px;    
+    }
+}
+.c {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (min-width: 375px) and (max-width :720px){
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.c .collapse {
+    &-title , &-content {
+        width: 547px;
+        list-style-type: none;
+        font-size: 18px;
+        align-items: center;
+        @media screen and (min-width: 375px) and (max-width :720px){
+            width: 94.02%;
+            font-size: 13px;
+        }
+    }
+    &-title {
+        margin-top: 15px;
+        @media screen and (min-width: 375px) and (max-width :720px){
+            margin-top: 0;  
+        }   
+    }
+    &-content {
+        @media screen and (min-width: 375px) and (max-width :720px){
+            padding: 10px;  
+        }
+    }
+}

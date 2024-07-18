@@ -7,6 +7,9 @@ body {
 }
 
 #root {
-    max-width: 1440px;
     font-family: Montserrat;
+    max-width: 1440px;
+    @media screen and (min-width: 375px) and (max-width :720px){
+        padding:20px 0 0 0;
+    }
 }
