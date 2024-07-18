@@ -51,7 +51,7 @@ function Information () {
             <Banner 
                 imageSrc={imageInfo}
             />
-            <div>
+            <div className="about">
                 {about}
             </div>
         </div>

@@ -1,4 +1,4 @@
-
+import "../../styles/Slideshow.scss"
 import arrowBack from "../../assets/arrowBack.png";
 import arrowForward from "../../assets/arrowForward.png";
 import { useState } from "react";

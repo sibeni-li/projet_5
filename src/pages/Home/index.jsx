@@ -12,7 +12,7 @@ function Home () {
 
     //Render
     return (
-        <div>
+        <div className="home">
             <Banner 
                 imageSrc={imageHome} 
                 text="Chez vous, partout et ailleurs" 

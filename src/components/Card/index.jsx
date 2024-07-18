@@ -10,7 +10,7 @@ function Card () {
     const lodges = data.map((data) => {
         const id = data.id;
         return (
-            <Link to={'./fiche-logement/'+id} key={id} id={id}>
+            <Link to={'./fiche-logement/'+id} key={id} id={id} className="card-link">
                 <article className="card">
                     <img 
                         src={data.cover} 

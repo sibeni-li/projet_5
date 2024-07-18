@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "../../styles/Collapse.scss";
-import arrowDown from "../../assets/arrowDown.png";
-import arrowUp from "../../assets/arrowUp.png";
+import arrow from "../../assets/arrow.png";
 
 function Collapse ({titleCollapse , contentCollapse}) {
     //State
@@ -12,32 +11,15 @@ function Collapse ({titleCollapse , contentCollapse}) {
         setOpenCollapse(!openCollapse);
     };
     //Render
-    if (openCollapse) {
         return (
             <div className="collapse">
                 <h2 className="collapse-title">
                     {titleCollapse}
-                    <img src={arrowDown} alt="" onClick={handleClick}></img>
+                    <img src={arrow} className={`arrow ${openCollapse ? 'rotate' : ''}`} alt="arrow" onClick={handleClick}></img>
                 </h2>
-                <div className="collapse-content">{contentCollapse}</div>
+                <div className={`collapse-content ${openCollapse ? 'active' : 'inactive'}`}>{contentCollapse}</div>
             </div>
         ) ;
-    } else {
-        return (
-            <div className="collapse">
-                <h2 className="collapse-title">
-                    {titleCollapse}
-                    <img src={arrowUp} alt="" onClick={handleClick}></img>
-                </h2>
-            </div>
-        );
-    };
 };
 
 export default Collapse;
-
-/***
- * ***TODO***
- * Ajouter animation de transition à l'ouverture du collapse
- * 
- */
