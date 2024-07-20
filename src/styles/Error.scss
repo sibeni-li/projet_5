@@ -1,4 +1,7 @@
+/*Imports*/
 @import 'index';
+
+/****Error****/
 
 .error {
     display: flex;
@@ -10,6 +13,7 @@
     }
     &-title {
         font-size: 288px;
+        /*Responsive mobile*/
         @media screen and (min-width: 375px) and (max-width :720px){
             font-size: 96px;
         }
@@ -17,6 +21,7 @@
     &-text {
         font-weight: 500;
         font-size: 36px;
+        /*Responsive mobile*/
         @media screen and (min-width: 375px) and (max-width :720px){
             width: 260px;
             font-size: 18px;
@@ -27,8 +32,16 @@
         font-weight: 500;
         font-size: 18px;
         color: black;
+        /*Responsive mobile*/
         @media screen and (min-width: 375px) and (max-width :720px){
             font-size: 14px;
         }
+    }
+}
+.br {
+    display: none;
+    /*Responsive mobile*/
+    @media screen and (min-width: 375px) and (max-width :720px){
+        display: block;
     }
 }

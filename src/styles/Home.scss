@@ -1,23 +1,7 @@
-.card-container {
-    display: flex;
-    flex-direction: row;
-    width: 86.11%;
-    flex-wrap: wrap;
-    gap: 55px;
-    padding: 55px 0;
-    justify-content: center;
-    border-radius: 25px;
-    margin: 50px 100px;
-    background-color: rgba(246, 246, 246, 1);
-    @media screen and (min-width: 375px) and (max-width :720px){
-        flex-direction: column;
-        gap: 22px;
-        width: 89.33%;
-        margin: 0 20px;
-        padding: 0;
-        background-color: white;
-    }
-}
+/****Home****/
+
+/*Modification CSS Banner pour
+ être conforme à la maquette*/
 .home .banner__img {
     filter: brightness(0.4);
 }

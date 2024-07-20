@@ -1,15 +1,15 @@
+/****Header****/
+
 .nav {
     display: flex;
     margin: 50px 100px;
     width: 86.11%;
     justify-content: space-between;
+    /*Responsive mobile*/
     @media screen and (min-width: 375px) and (max-width :720px){
         margin: 0 20px 20px 20px;
         width: 89.33%;
-    }
-    &__logo {
-        width: 210px;
-        @media screen and (min-width: 375px) and (max-width :720px){
+        &__logo {
             width: 145px;
             height: 47px; 
         }
@@ -20,6 +20,7 @@
         width: 269px;
         list-style-type: none;
         justify-content: end;
+        /*Responsive mobile*/
         @media screen and (min-width: 375px) and (max-width :720px){
             gap: 26px;
         }
@@ -28,7 +29,7 @@
             text-decoration: none;
             font-size: 24px;
             font-weight: 500;
-            text-align: end;
+            /*Responsive mobile*/
             @media screen and (min-width: 375px) and (max-width :720px){
                 font-size: 12px;
                 text-transform: uppercase;

@@ -1,0 +1,21 @@
+/*Imports*/
+@import 'index';
+
+/****Tag****/
+
+.ba li{
+    background-color: $main-color;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    min-width: 80px;
+    padding: 4px 17.5px;
+    text-align: center;
+    border-radius: 10px;
+    /*Responsive mobile*/
+    @media screen and (min-width: 375px) and (max-width :720px){
+        min-width: 59px;
+        font-size: 10px;
+        padding: 4px 12.5px;
+    }
+}

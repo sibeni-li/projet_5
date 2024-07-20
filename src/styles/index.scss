@@ -1,7 +1,14 @@
+/****Index****/
+
+/*Imports*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/*Variables*/
 $main-color:rgba(255, 96, 96, 1);
 
+/*Mixins*/
+
+/*Réinitialisation CSS*/
 body {
     margin: 0;
 }
@@ -9,6 +16,7 @@ body {
 #root {
     font-family: Montserrat;
     max-width: 1440px;
+    /*Responsive mobile*/
     @media screen and (min-width: 375px) and (max-width :720px){
         padding:20px 0 0 0;
     }
