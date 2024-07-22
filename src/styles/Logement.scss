@@ -1,3 +1,4 @@
+/*Imports*/
 @import 'index';
 
 /****Logement****/
@@ -6,11 +7,11 @@
 /*Titre, localisation, TAG et hôte*/
 .lodge {
     width: 86.11%;
-    margin: 0 100px 50px 100px;
+    margin: 0 7% 50px 7%;
     /*Responsive mobile*/
     @media screen and (min-width: 375px) and (max-width :720px){
         width: 89.33%;
-        margin: 20px;
+        margin:20px 5.33%;
     }
     &-a{
         display: flex;
@@ -127,39 +128,37 @@
 .c {
     display: flex;
     justify-content: space-between;
+    gap: 76px;
     /*Responsive mobile*/
     @media screen and (min-width: 375px) and (max-width :720px){
         flex-direction: column;
         gap: 20px;
     }
-}
-
-/*Modification CSS Collapse pour
- être conforme à la maquette*/
-.c .collapse {
-    &-title , &-content {
-        width: 547px;
-        font-size: 18px;
-        /*Responsive mobile*/
+    /*Modification CSS Collapse pour
+     être conforme à la maquette*/
+    & .collapse {
+        width:50%;
         @media screen and (min-width: 375px) and (max-width :720px){
-            width: 94.02%;
-            font-size: 13px;
+            width: 100%;
+            margin-left: 0;
         }
-    }
-    &-title {
-        margin-top: 9px;
-        /*Responsive mobile*/
-        @media screen and (min-width: 375px) and (max-width :720px){
-            margin-top: 0;  
-        }   
-    }
-    &-content{
-        list-style-type: none;
-    }
-    &-content.active {
-        /*Responsive mobile*/
-        @media screen and (min-width: 375px) and (max-width :720px){
-            padding: 10px;  
+        &__title , &__content {
+            font-size: 18px;
+            /*Responsive mobile*/
+            @media screen and (min-width: 375px) and (max-width :720px){
+                font-size: 13px;
+            }
+        }
+        &__title {
+            margin-top: 9px;
+            /*Responsive mobile*/
+            @media screen and (min-width: 375px) and (max-width :720px){
+                margin-top: 0;  
+            }   
+        }
+        &__content{
+            list-style-type: none;
+        
         }
     }
 }

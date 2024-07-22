@@ -7,35 +7,38 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    &-title , &-content {
-        width: 68.61%;
+    width: 68.61%;
+    @media screen and (min-width: 375px) and (max-width :720px){
+        width: 89.33%;
+    }
+    &__title , &__content {
+        width: 100%;
         font-size: 24px;
         /*Responsive mobile*/
         @media screen and (min-width: 375px) and (max-width :720px){
-            width: 84%;
             gap: 20px;
             font-size: 13px;
         }
     }
-    &-title {
+    &__title {
         display: flex;
         justify-content: space-between;
         align-items: center;
         background-color: $main-color;
-        padding: 10px 20px 10px 15px;
+        padding: 10px 20px 10px 10px;
         margin-bottom: 0;
         margin-top: 30px;
         border-radius: 5px;
-        height: 32px;
+        height: 52px;
         color: white;
         /*Responsive mobile*/
         @media screen and (min-width: 375px) and (max-width :720px){
-            height: 10px;
+            height: 30px;
             margin-top: 0px;
             padding: 10px;
         }
     }
-    &-content {
+    &__content {
         background-color: rgba(246, 246, 246, 1);
         border-radius: 0 0 5px 5px;
         overflow: hidden;
@@ -44,7 +47,7 @@
         opacity: 0;
         &.active {
             max-height: 175px; 
-            padding: 20px 20px 20px 15px;
+            padding: 10px 20px 10px 10px;
             opacity: 1;
             /*Responsive mobile*/
             @media screen and (min-width: 375px) and (max-width :720px){
@@ -62,7 +65,7 @@
         width: 16px;
     }
     &.rotate {
-        transform: rotate(180deg);
+        transform: rotate(-180deg);
     }
 }
 

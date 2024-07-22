@@ -9,15 +9,20 @@ $main-color:rgba(255, 96, 96, 1);
 /*Mixins*/
 
 /*Réinitialisation CSS*/
-body {
-    margin: 0;
+* {
+    box-sizing:border-box;
 }
 
-#root {
-    font-family: Montserrat;
+body, html {
+    margin: 0;
+    padding: 0;
     max-width: 1440px;
-    /*Responsive mobile*/
-    @media screen and (min-width: 375px) and (max-width :720px){
-        padding:20px 0 0 0;
-    }
+    font-family: Montserrat;
 }
+
+content {
+    display:block;
+}
+
+/* TODO
+Ajouter variables et mixins */
