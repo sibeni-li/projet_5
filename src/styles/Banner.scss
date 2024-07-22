@@ -1,10 +1,14 @@
+/*Imports*/
+@import 'index.scss';
+
 /****Banner****/
 
 .banner {
     margin: 0 6.9%;
     max-height: 223px;
+    
     /*Responsive mobile*/
-    @media screen and (min-width: 375px) and (max-width :720px){
+    @include responsive(375px, 720px){
         margin: 20px 5.33%;
         max-height: 111px; 
     }
@@ -12,26 +16,25 @@
         width: 100%;
         height: 223px;
         object-fit: cover;
-        border-radius: 25px;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        @include border-radius($border-radius-lg);
+        @include box-shadow($box-shadow);
         /*Responsive mobile*/
-        @media screen and (min-width: 375px) and (max-width :720px){
+        @include responsive(375px, 720px){
             height: 111px;
             border-radius: 10px;
         }
     }
     &__text {
+        @include text-style (white , 48px , 700);
         width: 100%;
         text-align: center;
-        color:white;
-        font-weight: 700;
-        font-size: 48px;
         position: relative;
         bottom: 200px;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        text-shadow: $box-shadow;
+
         /*Responsive mobile*/
-        @media screen and (min-width: 375px) and (max-width :720px){
-            font-size: 24px;
+        @include responsive(375px, 720px){
+            font-size: $font-size-mdlg;
             bottom: 111px;
             width: 240px;
             text-align: left;

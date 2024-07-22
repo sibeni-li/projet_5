@@ -5,18 +5,17 @@
 
 .ba li{
     background-color: $main-color;
-    color: white;
-    font-weight: 700;
-    font-size: 14px;
+    @include text-style(white , $font-size-sm , 700);
     min-width: 115px;
     padding: 4px 17.5px;
     text-align: center;
-    border-radius: 10px;
+    @include border-radius($border-radius-md);
+
     /*Responsive mobile*/
-    @media screen and (min-width: 375px) and (max-width :720px){
+    @include responsive (375px , 720px){
         min-width: 84px;
         font-size: 10px;
         padding: 4px 12.5px;
-        border-radius: 5px;
+        @include border-radius($border-radius-sm);
     }
 }

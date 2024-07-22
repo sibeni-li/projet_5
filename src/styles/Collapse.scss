@@ -4,53 +4,60 @@
 /****Collapse****/
 
 .collapse {
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    align-items: center;
-    width: 68.61%;
-    @media screen and (min-width: 375px) and (max-width :720px){
+    width: 71.04%;
+
+    /*Responsive mobile*/
+    @include responsive (375px , 720px){
         width: 89.33%;
     }
+
     &__title , &__content {
         width: 100%;
-        font-size: 24px;
+        font-size: $font-size-mdlg;
+
         /*Responsive mobile*/
-        @media screen and (min-width: 375px) and (max-width :720px){
+        @include responsive (375px , 720px){
             gap: 20px;
             font-size: 13px;
         }
     }
+
     &__title {
-        display: flex;
+        @include flex-center;
         justify-content: space-between;
-        align-items: center;
         background-color: $main-color;
         padding: 10px 20px 10px 10px;
         margin-bottom: 0;
         margin-top: 30px;
-        border-radius: 5px;
+        @include border-radius($border-radius-sm);
         height: 52px;
         color: white;
+
         /*Responsive mobile*/
-        @media screen and (min-width: 375px) and (max-width :720px){
+        @include responsive (375px , 720px){
             height: 30px;
             margin-top: 0px;
             padding: 10px;
         }
     }
+
     &__content {
-        background-color: rgba(246, 246, 246, 1);
-        border-radius: 0 0 5px 5px;
+        background-color: $secondary-color;
+        @include border-radius( 0 0 $border-radius-sm $border-radius-sm);
         overflow: hidden;
         transition: max-height 0.3s ease-out;
         max-height: 0;
         opacity: 0;
+
         &.active {
             max-height: 175px; 
             padding: 10px 20px 10px 10px;
             opacity: 1;
+
             /*Responsive mobile*/
-            @media screen and (min-width: 375px) and (max-width :720px){
+            @include responsive (375px , 720px){
                 padding: 10px;
                 max-height: 140px;
             }
@@ -60,10 +67,12 @@
 
 .arrow {
     transition: transform 0.3s ease-out;
+
     /*Responsive mobile*/
-    @media screen and (min-width: 375px) and (max-width :720px){  
+    @include responsive (375px , 720px){  
         width: 16px;
     }
+    
     &.rotate {
         transform: rotate(-180deg);
     }

@@ -1,3 +1,6 @@
+/*Imports*/
+@import 'index.scss';
+
 /****Header****/
 
 .nav {
@@ -5,15 +8,18 @@
     margin: 50px 7%;
     width: 86.11%;
     justify-content: space-between;
+
     /*Responsive mobile*/
-    @media screen and (min-width: 375px) and (max-width :720px){
+    @include responsive (375px , 720px){
         margin: 20px 5.33%;
         width: 89.33%;
+
         &-logo {
             width: 145px;
             height: 47px; 
         }
     }
+
     &-list {
         display: flex;
         gap: 57px;
@@ -21,21 +27,23 @@
         padding-left: 0;
         list-style-type: none;
         justify-content: end;
+
         /*Responsive mobile*/
-        @media screen and (min-width: 375px) and (max-width :720px){
+        @include responsive (375px , 720px){
             gap: 26px;
         }
+
         &__link {
-            color: black;
+            @include text-style($text-color, $font-size-mdlg);
             text-decoration: none;
-            font-size: 24px;
-            font-weight: 500;
+            
             /*Responsive mobile*/
-            @media screen and (min-width: 375px) and (max-width :720px){
-                font-size: 12px;
+            @include responsive (375px , 720px){
+                font-size: $font-size-xsm;
                 text-transform: uppercase;
             }
         }
+
         &__link.active {
             text-decoration: underline;
         }

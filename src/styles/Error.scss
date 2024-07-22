@@ -4,45 +4,49 @@
 /****Error****/
 
 .error {
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    align-items: center;
     text-align: center;
     color: $main-color;
+
     &-title , &-link {
         margin: 100px 0;
     }
+
     &-title {
         font-size: 288px;
+
         /*Responsive mobile*/
-        @media screen and (min-width: 375px) and (max-width :720px){
+        @include responsive (375px , 720px){
             font-size: 96px;
         }
     }
+
     &-text {
-        font-weight: 500;
-        font-size: 36px;
+        @include text-style($main-color , $font-size-lg);
+
         /*Responsive mobile*/
-        @media screen and (min-width: 375px) and (max-width :720px){
+        @include responsive (375px , 720px){
             width: 260px;
             font-size: 18px;
             text-align: center;
         }
     }
+
     &-link {
-        font-weight: 500;
-        font-size: 18px;
-        color: black;
+        @include text-style($text-color , $font-size-md);
+
         /*Responsive mobile*/
-        @media screen and (min-width: 375px) and (max-width :720px){
+        @include responsive (375px , 720px){
             font-size: 14px;
         }
     }
 }
 .br {
     display: none;
+    
     /*Responsive mobile*/
-    @media screen and (min-width: 375px) and (max-width :720px){
+    @include responsive (375px , 720px){
         display: block;
     }
 }

@@ -8,38 +8,42 @@
 .lodge {
     width: 86.11%;
     margin: 0 7% 50px 7%;
+
     /*Responsive mobile*/
-    @media screen and (min-width: 375px) and (max-width :720px){
+    @include responsive(375px , 720px) {
         width: 89.33%;
         margin:20px 5.33%;
     }
+
     &-a{
         display: flex;
         justify-content: space-between;
+
         /*Responsive mobile*/
-        @media screen and (min-width: 375px) and (max-width :720px){
+        @include responsive (375px , 720px){
             flex-direction: column;  
         }
     }
+
     &-title {
-        color: rgba(255, 96, 96, 1);
-        font-weight: 500;
-        font-size: 36px;
+        @include text-style($main-color , $font-size-lg);
         margin-bottom: 5px;
+
         /*Responsive mobile*/
-        @media screen and (min-width: 375px) and (max-width :720px){
-            font-size: 18px;
+        @include responsive (375px , 720px){
+            font-size: $font-size-md;
             margin-top: 0;
         }
     }
+
     &-location {
+        @include text-style($text-color , $font-size-md);
         margin: 0;
-        font-size: 18px;
-        font-weight: 500;
         margin-bottom: 9px;
+
         /*Responsive mobile*/
-        @media screen and (min-width: 375px) and (max-width :720px){
-            font-size: 14px;
+        @include responsive (375px , 720px){
+            font-size: $font-size-sm;
             margin-top: 10px;
         }
     }
@@ -48,38 +52,41 @@
 .a {
     display: flex;
     flex-direction: column;
+
     /*Responsive mobile*/
-    @media screen and (min-width: 375px) and (max-width :720px){
+    @include responsive (375px , 720px){
         justify-content: center;
     }
 }
 
 .ab {
+    @include text-style($main-color, $font-size-md);
     display: flex;
-    color: $main-color;
-    font-size: 18px;
     gap: 10px;
     margin: 10px 0;
+
     /*Responsive mobile*/
-    @media screen and (min-width: 375px) and (max-width :720px){
-        font-size: 12px;   
+    @include responsive (375px , 720px){
+        font-size: $font-size-xsm;   
     }
 }
 
 .lodge-host-name {
     width: 93px;
+
     /*Responsive mobile*/
-    @media screen and (min-width: 375px) and (max-width :720px){
+    @include responsive (375px , 720px){
         width: 60px;    
     }
 }
 
 .lodge-host-picture {
     width: 64px;
-    border-radius: 50%;
+    @include border-radius($border-radius-xlg);
     margin: 10px 0;
+
     /*Responsive mobile*/
-    @media screen and (min-width: 375px) and (max-width :720px){
+    @include responsive (375px , 720px){
         width: 32px;
         height: 32px;  
     }
@@ -91,8 +98,9 @@
     align-items: flex-end;
     text-align: end;
     margin: 10px 0;
+
     /*Responsive mobile*/
-    @media screen and (min-width: 375px) and (max-width :720px){
+    @include responsive (375px , 720px){
         flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
@@ -105,8 +113,9 @@
     list-style-type: none;
     gap: 10px;
     padding: 0;
+
     /*Responsive mobile*/
-    @media screen and (min-width: 375px) and (max-width :720px){
+    @include responsive (375px , 720px){
         margin: 5px 0 0 0;
     }
 }
@@ -115,8 +124,9 @@
     width: 196px;
     display: flex;
     justify-content: space-between;
+
     /*Responsive mobile*/
-    @media screen and (min-width: 375px) and (max-width :720px){
+    @include responsive (375px , 720px){
         width: 98px;
         height: 18px;    
     }
@@ -129,33 +139,41 @@
     display: flex;
     justify-content: space-between;
     gap: 76px;
+
     /*Responsive mobile*/
-    @media screen and (min-width: 375px) and (max-width :720px){
+    @include responsive (375px , 720px){
         flex-direction: column;
         gap: 20px;
     }
+
     /*Modification CSS Collapse pour
      être conforme à la maquette*/
     & .collapse {
         width:50%;
-        @media screen and (min-width: 375px) and (max-width :720px){
+
+        @include responsive (375px , 720px){
             width: 100%;
             margin-left: 0;
         }
+
         &__title , &__content {
-            font-size: 18px;
+            @include text-style(white, $font-size-md, 700);
+
             /*Responsive mobile*/
-            @media screen and (min-width: 375px) and (max-width :720px){
+            @include responsive (375px , 720px){
                 font-size: 13px;
             }
         }
+
         &__title {
             margin-top: 9px;
+
             /*Responsive mobile*/
-            @media screen and (min-width: 375px) and (max-width :720px){
+            @include responsive (375px , 720px){
                 margin-top: 0;  
             }   
         }
+        
         &__content{
             list-style-type: none;
         

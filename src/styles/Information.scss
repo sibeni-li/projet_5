@@ -1,3 +1,6 @@
+/*Imports*/
+@import 'index.scss';
+
 /****Banner****/
 
 /*Modification CSS Banner pour
@@ -10,11 +13,11 @@
 
 /*Div qui va accueillir les collapses*/
 .about {
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    align-items: center;
+
     /*Responsive mobile*/
-    @media screen and (min-width: 375px) and (max-width :720px){
+    @include responsive (375px , 720px){
         gap: 20px;  
     }
 }
