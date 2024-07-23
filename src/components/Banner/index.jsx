@@ -1,14 +1,12 @@
+//Imports
 import '../../styles/Banner.scss';
 
-function Banner ({text,imageSrc}) {
-    //State
 
-    //Comportement
+function Banner ({text,imageSrc,imageDesc}) {
     
-    //Render
     return (
         <div className="banner">
-            <img src={imageSrc} className="banner__img" alt=""/>
+            <img src={imageSrc} className="banner__img" alt={imageDesc}/>
             <p className="banner__text">{text}</p>
         </div>
     );

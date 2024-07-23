@@ -1,3 +1,4 @@
+//Imports
 import data from "../../assets/logements.json";
 import Error from "../Error";
 import { useParams } from "react-router-dom";
@@ -5,31 +6,32 @@ import Slideshow from "../../components/Slideshow";
 import Tag from "../../components/Tag";
 import Collapse from "../../components/Collapse";
 import "../../styles/Logement.scss";
-import starActive from "../../assets/starActive.png"
-import starInactive from "../../assets/starInactive.png"
+import starActive from "../../assets/starActive.png";
+import starInactive from "../../assets/starInactive.png";
+
 
 function Logement (){
-    //State
+    
     const {id} = useParams();
     
-    //Comportement
     const showLodge = data.find((lodge) => lodge.id === id);
     console.log(showLodge);
    
-    //Render
     if (!showLodge) {
         return (<Error/>);
     }else {
-        const ratingValue = showLodge.rating
-        console.log(ratingValue)
-        const stars = []
+        const ratingValue = showLodge.rating;
+        console.log(ratingValue);
+        const stars = [];
+
         for (let i=0; i<5; i++){
             if (i < ratingValue) {
-                stars.push(<img src={starActive} key={i} alt="" />)
+                stars.push(<img src={starActive} key={i} alt="étoile active" />);
             }else {
-                stars.push(<img src={starInactive} key={i} alt="" />)
-            }
-        }
+                stars.push(<img src={starInactive} key={i} alt="étoile inactive" />);
+            };
+        };
+        
         return ( 
             <div>
                 <div>

@@ -1,25 +1,27 @@
+//Imports
 import { useState } from "react";
 import "../../styles/Collapse.scss";
 import arrow from "../../assets/arrow.png";
 
+
 function Collapse ({titleCollapse , contentCollapse}) {
-    //State
+   
     const [openCollapse, setOpenCollapse] = useState(false);
     console.log(openCollapse);
-    //Comportement
+   
     const handleClick = () => {
         setOpenCollapse(!openCollapse);
     };
-    //Render
+    
         return (
             <div className="collapse">
-                <h2 className="collapse-title">
+                <h2 className="collapse__title">
                     {titleCollapse}
-                    <img src={arrow} className={`arrow ${openCollapse ? 'rotate' : ''}`} alt="arrow" onClick={handleClick}></img>
+                    <img src={arrow} className={`arrow ${openCollapse ? 'rotate' : ''}`} alt="flèche" onClick={handleClick}></img>
                 </h2>
-                <div className={`collapse-content ${openCollapse ? 'active' : 'inactive'}`}>{contentCollapse}</div>
+                <div className={`collapse__content ${openCollapse ? 'active' : ''}`}>{contentCollapse}</div>
             </div>
-        ) ;
+        );
 };
 
 export default Collapse;

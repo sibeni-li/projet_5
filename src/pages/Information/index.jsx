@@ -1,14 +1,15 @@
+//Imports
 import Banner from "../../components/Banner";
 import Collapse from "../../components/Collapse";
 import imageInfo from "../../assets/imageInfo.png";
 import "../../styles/Information.scss";
 
+
 const aboutList = [
     {
         id:0 ,
         title: 'Fiabilité',
-        content:
-        'Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.',
+        content:'Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.',
     },
     {
         id:1 ,
@@ -30,12 +31,13 @@ const aboutList = [
     },
 ];
 
-function Information () {
-    //State
 
-    //Comportement
+function Information () {
+    
     const about = aboutList.map((aboutList) => {
+
         const idAbout = aboutList.id;
+
         return (
             <Collapse 
                 key={idAbout}
@@ -45,11 +47,12 @@ function Information () {
             />
         );
     });
-    //Render
+    
     return (
         <div>
             <Banner 
                 imageSrc={imageInfo}
+                imageDesc="Paysage montagneux"
             />
             <div className="about">
                 {about}

@@ -1,14 +1,15 @@
-function Tag ({showLodge}) {
-    //Comportement
-    const tag = showLodge.tags;
-    const contentTag = tag.map((tag)=> <li key={tag}>{tag}</li>);
-    console.log(contentTag);
+//Imports
+import '../../styles/Tag.scss';
 
-    //Render
+
+function Tag ({showLodge}) {
+
+    const tag = showLodge.tags;
+
     return (
         <div>
             <ul>
-                {contentTag}
+                {tag.map((tag)=> <li key={tag}>{tag}</li>)}
             </ul>
         </div>
     );
