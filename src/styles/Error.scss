@@ -9,11 +9,11 @@
     text-align: center;
     color: $main-color;
 
-    &-title , &-link {
+    &__title , &__link {
         margin: 100px 0;
     }
 
-    &-title {
+    &__title {
         font-size: 288px;
 
         /*Responsive mobile*/
@@ -22,7 +22,7 @@
         }
     }
 
-    &-text {
+    &__text {
         @include text-style($main-color , $font-size-lg);
 
         /*Responsive mobile*/
@@ -33,7 +33,7 @@
         }
     }
 
-    &-link {
+    &__link {
         @include text-style($text-color , $font-size-md);
 
         /*Responsive mobile*/
@@ -42,6 +42,7 @@
         }
     }
 }
+
 .br {
     display: none;
     

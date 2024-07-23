@@ -12,7 +12,7 @@
         margin-top: 20px;
     }
 
-    &__infos {
+    &-infos {
         padding: 50px 100px 0 100px;
         @include flex-center;
         flex-direction: column;
@@ -28,7 +28,7 @@
             justify-content: center;
         }
 
-        &--rights {
+        &__rights {
             @include text-style(white , $font-size-mdlg);
 
             /*Responsive mobile*/

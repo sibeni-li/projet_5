@@ -6,18 +6,20 @@
 .banner {
     margin: 0 6.9%;
     max-height: 223px;
+    width: 86.11%;
     
     /*Responsive mobile*/
     @include responsive(375px, 720px){
         margin: 20px 5.33%;
         max-height: 111px; 
+        width: 89.33%;
     }
     &__img {
         width: 100%;
         height: 223px;
         object-fit: cover;
-        @include border-radius($border-radius-lg);
-        @include box-shadow($box-shadow);
+        border-radius: $border-radius-lg;
+        box-shadow: $shadow;
         /*Responsive mobile*/
         @include responsive(375px, 720px){
             height: 111px;
@@ -30,7 +32,7 @@
         text-align: center;
         position: relative;
         bottom: 200px;
-        text-shadow: $box-shadow;
+        text-shadow: $shadow;
 
         /*Responsive mobile*/
         @include responsive(375px, 720px){

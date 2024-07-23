@@ -1,3 +1,35 @@
+/**
+ * Information Component
+ * 
+ * This component renders the "About" page of the application.
+ * It displays a banner and a series of collapsible sections with information about the service.
+ *
+ * @component
+ * @requires ../../components/Banner
+ * @requires ../../components/Collapse
+ * @requires ../../assets/imageInfo.png
+ * @requires ../../styles/Information.scss
+ * 
+ * Key features:
+ * 1. Displays a banner with a background image
+ * 2. Renders a series of collapsible sections with information about the service
+ *
+ * Data structure:
+ * - Uses an array 'aboutList' to store information for each collapsible section
+ * - Each item in 'aboutList' has an id, title, and content
+ *
+ * Layout:
+ * - Banner is displayed at the top
+ * - Collapsible sections are rendered below the banner in a div with class 'about'
+ *
+ *
+ * @example
+ * return (
+ *   <Information />
+ * )
+ */
+
+
 //Imports
 import Banner from "../../components/Banner";
 import Collapse from "../../components/Collapse";
@@ -5,6 +37,7 @@ import imageInfo from "../../assets/imageInfo.png";
 import "../../styles/Information.scss";
 
 
+// Array of objects containing information for each collapsible section
 const aboutList = [
     {
         id:0 ,
@@ -54,7 +87,7 @@ function Information () {
                 imageSrc={imageInfo}
                 imageDesc="Paysage montagneux"
             />
-            <div className="about">
+            <div className="collapse-box__about">
                 {about}
             </div>
         </div>

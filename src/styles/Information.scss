@@ -3,16 +3,15 @@
 
 /****Banner****/
 
-/*Modification CSS Banner pour
- être conforme à la maquette*/
+/*Banner modification to
+conform to the model*/
 .banner__img {
     filter: brightness(0.7);
 }
 
 /****Information****/
 
-/*Div qui va accueillir les collapses*/
-.about {
+.collapse-box__about {
     @include flex-center;
     flex-direction: column;
 

@@ -19,14 +19,14 @@
     &__img{
         width: 86.11%;
         height: 415px;
-        @include border-radius($border-radius-lg);
+        border-radius: $border-radius-lg;
         object-fit: cover;
 
         /*Responsive mobile*/
         @include responsive (375px , 720px){
             width: 89.33%;
             height: 255px;
-            @include border-radius($border-radius-md);
+            border-radius: $border-radius-md;
             margin: 0;
         }
 

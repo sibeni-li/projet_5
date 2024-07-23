@@ -3,8 +3,8 @@
 
 /****Logement****/
 
-/*Description du logement*/
-/*Titre, localisation, TAG et hôte*/
+/*Description of lodge*/
+/*Title, location, TAG, host and rating*/
 .lodge {
     width: 86.11%;
     margin: 0 7% 50px 7%;
@@ -15,7 +15,7 @@
         margin:20px 5.33%;
     }
 
-    &-a{
+    &-about{
         display: flex;
         justify-content: space-between;
 
@@ -25,7 +25,17 @@
         }
     }
 
-    &-title {
+    &-information {
+        display: flex;
+        flex-direction: column;
+    
+        /*Responsive mobile*/
+        @include responsive (375px , 720px){
+            justify-content: center;
+        }
+    }
+
+    &-information__title {
         @include text-style($main-color , $font-size-lg);
         margin-bottom: 5px;
 
@@ -36,7 +46,7 @@
         }
     }
 
-    &-location {
+    &-information__location {
         @include text-style($text-color , $font-size-md);
         margin: 0;
         margin-bottom: 9px;
@@ -49,17 +59,35 @@
     }
 }
 
-.a {
+.tag-container ul {
     display: flex;
-    flex-direction: column;
+    list-style-type: none;
+    gap: 10px;
+    padding: 0;
 
     /*Responsive mobile*/
     @include responsive (375px , 720px){
-        justify-content: center;
+        margin: 5px 0 0 0;
     }
 }
 
-.ab {
+.host-information-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: end;
+    margin: 10px 0;
+
+    /*Responsive mobile*/
+    @include responsive (375px , 720px){
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+    }
+}
+
+.host-infos {
     @include text-style($main-color, $font-size-md);
     display: flex;
     gap: 10px;
@@ -82,7 +110,7 @@
 
 .lodge-host-picture {
     width: 64px;
-    @include border-radius($border-radius-xlg);
+    border-radius: $border-radius-xlg;
     margin: 10px 0;
 
     /*Responsive mobile*/
@@ -92,35 +120,7 @@
     }
 }
 
-.b {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: end;
-    margin: 10px 0;
-
-    /*Responsive mobile*/
-    @include responsive (375px , 720px){
-        flex-direction: row-reverse;
-        justify-content: space-between;
-        align-items: center;
-        height: 40px;
-    }
-}
-
-.ba ul {
-    display: flex;
-    list-style-type: none;
-    gap: 10px;
-    padding: 0;
-
-    /*Responsive mobile*/
-    @include responsive (375px , 720px){
-        margin: 5px 0 0 0;
-    }
-}
-
-.bb {
+.rating {
     width: 196px;
     display: flex;
     justify-content: space-between;
@@ -134,8 +134,7 @@
 
 /****Collapse****/
 
-/*Div qui va accueillir les collapses*/
-.c {
+.collapse-box__lodges {
     display: flex;
     justify-content: space-between;
     gap: 76px;
@@ -146,8 +145,8 @@
         gap: 20px;
     }
 
-    /*Modification CSS Collapse pour
-     être conforme à la maquette*/
+    /*Collapse modification to
+    conform to the model*/
     & .collapse {
         width:50%;
 
@@ -157,7 +156,7 @@
         }
 
         &__title , &__content {
-            @include text-style(white, $font-size-md, 700);
+            font-size: $font-size-md;
 
             /*Responsive mobile*/
             @include responsive (375px , 720px){
